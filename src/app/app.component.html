@@ -1,0 +1,43 @@
+<body>
+  
+    
+<form>
+   
+<h1>Weather Forecast</h1>
+    <input #box type="text" (keyup.enter)='getData(box.value)' placeholder="enter city name.." >
+   
+ <button (click)='getData(box.value)'>Search</button>
+
+</form>
+
+  <app-view-data>
+    
+     
+     <h2 cityName>{{result.city.name}}, {{result.city.country}}</h2>
+     <h6 humidity>{{result.list[0].main.humidity}}</h6>
+     <h6 windspeed>{{result.list[0].wind.speed}}</h6>
+
+
+     <p ImgDay1><img src="http://openweathermap.org/img/w/{{result.list[0].weather[0].icon}}.png"></p>    
+     <p MinDay1>{{result.list[0].main.temp_min}}</p>
+     <p MaxDay1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{result.list[0].main.temp_max}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    
+
+       
+
+     <p ImgDay2><img src="http://openweathermap.org/img/w/{{result.list[8].weather[0].icon}}.png"></p>
+     <p MinDay2>{{result.list[8].main.temp_min}}</p>&nbsp
+     <p MaxDay2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{result.list[8].main.temp_max}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+    
+     
+
+
+        <p ImgDay3><img src="http://openweathermap.org/img/w/{{result.list[16].weather[0].icon}}.png"></p>
+        <p MinDay3>{{result.list[16].main.temp_min}}</p>
+        <p MaxDay3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{result.list[16].main.temp_max}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+       
+
+
+    
+  </app-view-data>
+</body>

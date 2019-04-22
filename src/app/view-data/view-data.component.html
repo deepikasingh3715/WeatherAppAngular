@@ -1,0 +1,39 @@
+<form>
+  <h3></h3>
+  <h2><ng-content select="[cityName]"></ng-content></h2>
+  
+  <h4>humidity:<ng-content select="[humidity]"></ng-content></h4>
+  
+  <h4>windspeed:<ng-content select="[windspeed]"></ng-content></h4>
+
+
+<table>
+  <h1><ng-content select="[hi]"></ng-content></h1>
+<tr><td>Days</td><td>Weather</td><td>Min</td><td>Max</td></tr>
+<tr>
+  <td><h5>Today:</h5></td> 
+   <td><ng-content select="[ImgDay1]"> </ng-content></td>  
+   <td><ng-content select="[MinDay1]"> </ng-content></td> 
+   <td><ng-content select="[MaxDay1]"> </ng-content></td> 
+
+</tr>
+
+
+   <tr> 
+  <td><h5>Tomorrow:   </h5>  </td>
+  <td><ng-content select="[ImgDay2]"> </ng-content></td>  
+  <td><ng-content select="[MinDay2]"> </ng-content></td> 
+  <td><ng-content select="[MaxDay2]"> </ng-content></td>     
+</tr>
+
+      <tr> 
+          <td><h5>After Tomorrow:   </h5> </td>
+          <td><ng-content select="[ImgDay3]"> </ng-content></td> 
+          <td><ng-content select="[MinDay3]"> </ng-content></td> 
+          <td><ng-content select="[MaxDay3]"> </ng-content></td>  
+        </tr>
+
+
+
+</table>
+</form>
